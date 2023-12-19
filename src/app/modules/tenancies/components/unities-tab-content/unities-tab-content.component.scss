@@ -1,0 +1,28 @@
+:host {
+  width: 100%;
+  .unities-content-wrapper {
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    box-sizing: border-box;
+    .tab-header-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #212121de;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 25.6px;
+    }
+    .tenancy-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 20px;
+    }
+  }
+}

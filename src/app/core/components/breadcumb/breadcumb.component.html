@@ -1,0 +1,5 @@
+<div class="breadcumb-wrapper">
+    <a *ngFor="let route of routes;  index as i" [href]="route.label"
+        [ngClass]="i === routes.length -1 ? 'active': ''">{{route.label}}
+        <span *ngIf="i < routes.length -1">></span></a>
+</div>

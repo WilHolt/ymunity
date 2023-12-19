@@ -1,0 +1,21 @@
+<mat-card [appearance]="'raised'">
+    <mat-card-content>
+        <div class="content-wrapper">
+            <div class="name-wrapper">
+                <h6 class="name">{{tenancyUnity.name}} </h6>
+                <mat-icon class="star" *ngIf="tenancyUnity.isFavorite">star</mat-icon>
+            </div>
+            <div class="attatchment">
+                <span class="attatchment address">{{tenancyUnity.address}}</span>
+                <span class="attatchment city-state">{{tenancyUnity.city | statecity: tenancyUnity.state}}</span>
+                <span class="attatchment postal-code">CEP: {{tenancyUnity.postalCode}}</span>
+            </div>
+        </div>
+    </mat-card-content>
+    <mat-card-footer>
+        <button mat-button color="primary">
+            <mat-icon>edit</mat-icon>EDITAR</button>
+        <button mat-button color="warn" (click)="deleteUnity()">
+            <mat-icon>delete</mat-icon>EXCLUIR</button>
+    </mat-card-footer>
+</mat-card>

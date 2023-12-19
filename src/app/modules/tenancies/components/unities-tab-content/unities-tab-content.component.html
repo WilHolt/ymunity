@@ -1,0 +1,10 @@
+<div class="unities-content-wrapper">
+    <div class="tab-header-wrapper">
+        <span>Adicione endereços de diferentes unidades.</span>
+        <button mat-raised-button [color]="'primary'" (click)="createUnity()">
+            <mat-icon>add</mat-icon> ADICIONAR </button>
+    </div>
+    <div class="tenancy-list">
+        <ymt-tenancy-unity-card *ngFor="let unity of unities" [tenancyUnity]="unity"></ymt-tenancy-unity-card>
+    </div>
+</div>

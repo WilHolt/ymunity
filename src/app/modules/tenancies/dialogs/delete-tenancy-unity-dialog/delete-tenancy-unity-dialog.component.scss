@@ -1,0 +1,14 @@
+:host {
+  background: white;
+  .delete-tenancy-unity-wrapper {
+    background-color: white;
+    padding: 24px;
+    color: #212121de;
+    .actions-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      gap: 20px;
+    }
+  }
+}

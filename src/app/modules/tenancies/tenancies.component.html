@@ -1,0 +1,30 @@
+<div class="tenancies-wrapper">
+    <div class="header">
+        <ymt-tenancy-header (goBack)="goBack()"></ymt-tenancy-header>
+    </div>
+    <mat-tab-group [selectedIndex]="1">
+        <mat-tab label="Geral">
+            <div class="tab-content">
+            </div>
+        </mat-tab>
+        <mat-tab label="Unidades">
+            <div class="tab-content">
+                <ymt-unities-tab-content [unities]="tenancyUnities$ | async"></ymt-unities-tab-content>
+            </div>
+        </mat-tab>
+        <mat-tab label="Usuários">
+            <div class="tab-content">
+                Usuários
+            </div>
+        </mat-tab>
+        <mat-tab label="Planos">
+            <div class="tab-content">
+                Planos</div>
+        </mat-tab>
+        <mat-tab label="Patologias">
+            <div class="tab-content">
+                Patologias
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+</div>

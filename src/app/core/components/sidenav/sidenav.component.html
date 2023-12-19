@@ -1,0 +1,28 @@
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>
+        <div class="brand-wrapper">
+            <img src="assets/images/svg-icons/core/brand.svg" alt="">
+        </div>
+        <div class="menu-list-wrapper">
+            <mat-nav-list>
+                <a mat-list-item routerLink="" >
+                    <span matListItemTitle>Home</span>
+                </a>
+                <mat-list-item role="navigation" >
+                    <!-- <mat-icon  color="accent">folder</mat-icon> -->
+                    <href matListItemTitle>Usuários</href>
+                </mat-list-item>
+                <mat-list-item role="navigation" >
+                    <!-- <mat-icon  color="accent">folder</mat-icon> -->
+                    <href matListItemTitle>Tenancies</href>
+                </mat-list-item>
+                <mat-list-item role="navigation" >
+                    <!-- <mat-icon >folder</mat-icon> -->
+                    <href matListItemTitle>Plano de Saúde</href>
+                </mat-list-item>
+                
+            </mat-nav-list>
+        </div>
+    </mat-drawer>
+    <mat-drawer-content><ng-content></ng-content></mat-drawer-content>
+</mat-drawer-container>

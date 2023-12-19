@@ -1,0 +1,36 @@
+<form [formGroup]="form" class="form-wrapper">
+    <h2>Criar Unidade</h2>
+    <mat-form-field appearance="fill">
+        <mat-label>Nome da Unidade</mat-label>
+        <input required matInput placeholder="Pulsus Santa Lúcia" formControlName="name">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>CEP</mat-label>
+        <input required matInput placeholder="31258-060" formControlName="cep">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Estado</mat-label>
+        <select required matNativeControl formControlName="state" [value]="form.value.state.code" [name]="'state'">
+            <option *ngFor="let state of states$ | async" [value]="state.code">{{state.name}}</option>
+        </select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Cidade</mat-label>
+        <select required matNativeControl [value]="form.value.city" name="car" formControlName="city">
+            <option value="" selected></option>
+            <option *ngFor="let city of cities$ | async" [value]="city">{{city}}</option>
+        </select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Endereço</mat-label>
+        <input required matInput placeholder="Rua Candelaro Machado, 13, Prédio 2, bairro Santa Lúcia" formControlName="address">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Numero</mat-label>
+        <input required matInput placeholder="3002" formControlName="number">
+    </mat-form-field>
+    <div class="actions-wrapper">
+        <button mat-button (click)="cancel()">CANCELAR</button>
+        <button mat-raised-button color="primary" (click)="createUnity()"> CRIAR</button>
+    </div>
+</form>

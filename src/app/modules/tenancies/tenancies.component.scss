@@ -1,0 +1,14 @@
+.tenancies-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 12px;
+  .tab-content {
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+    padding: 24px;
+    display: flex;
+    box-sizing: border-box;
+  }
+}
