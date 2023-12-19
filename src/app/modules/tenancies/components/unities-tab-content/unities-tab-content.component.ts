@@ -1,10 +1,9 @@
 import { Component, Input } from '@angular/core';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { CreateTenancyUnityComponent } from '../../dialogs/create-tenancy-unity/create-tenancy-unity.component';
 import { TenancyUnityModel } from '../../models/tenancy-unity.model';
-import { tap } from 'rxjs';
 import { Store } from '@ngxs/store';
-import { CreateUnity, DeleteUnity } from '../../state/tenancies.actions';
+import { CreateUnity } from '../../state/tenancies.actions';
 
 @Component({
   selector: 'ymt-unities-tab-content',
@@ -13,7 +12,6 @@ import { CreateUnity, DeleteUnity } from '../../state/tenancies.actions';
 })
 export class UnitiesTabContentComponent {
   @Input() unities: TenancyUnityModel[] | null = [];
-  // dialogRef: MatDialogRef<CreateTenancyUnityComponent>
   constructor(private dialog: MatDialog, private store: Store) { }
 
   createUnity() {

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Select, Store } from '@ngxs/store';
-import { FetchCities, FetchStates, FetchTenancyUnities } from './state/tenancies.actions';
+import { FetchStates, FetchTenancyUnities } from './state/tenancies.actions';
 import { Observable } from 'rxjs';
 import { TenancyUnityModel } from './models/tenancy-unity.model';
 import { TenanciesSelectors } from './state/tenancies.selectors';

@@ -1,5 +1,5 @@
-import { Component, Inject } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { Component } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'ymt-delete-tenancy-unity-dialog',
@@ -14,7 +14,7 @@ export class DeleteTenancyUnityDialogComponent {
   deleteUnity() {
     this.dialogRef.close(true);
   }
-  
+
   closeDialog() {
     this.dialogRef.close(false);
   }

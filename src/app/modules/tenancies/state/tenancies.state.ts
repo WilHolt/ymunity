@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Action, State, StateContext } from '@ngxs/store';
 import { TenanciesStateModel, defaults } from './tenancies.model';
-import { DeleteUnity, FetchCities, FetchStates, FetchTenancyUnities, FetchAddressByCep, CreateUnity } from './tenancies.actions';
+import { DeleteUnity, FetchCities, FetchStates, FetchTenancyUnities, CreateUnity } from './tenancies.actions';
 import { HttpClient } from '@angular/common/http';
 import { map, tap } from 'rxjs';
 import { enviromnent } from 'src/app/enviromnent';
 import { removeItemByIndex, sortAndSetFavoritesFirst } from './utils';
-import { TenanciesService } from '../tenancies.service';
 
 @State<TenanciesStateModel>({
   name: 'Tenancies',
@@ -53,7 +52,6 @@ export class TenanciesState {
       map((res: any) => res.data),
       tap(cities => ctx.patchState({ cities }))
     )
-    // ctx.setState({});
   }
 
   @Action(FetchStates)
