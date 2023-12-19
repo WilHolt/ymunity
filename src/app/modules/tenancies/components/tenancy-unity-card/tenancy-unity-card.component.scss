@@ -1,6 +1,12 @@
+@use "@angular/material" as mat;
+
 :host {
   width: 100%;
   flex: 1;
+  .card-container {
+    // por algum motivo, o elevation-z1 do material esta diferente do
+    @include mat.elevation(1);
+  }
 }
 .mat-mdc-card {
   width: 100%;

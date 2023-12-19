@@ -1,26 +1,41 @@
 <mat-drawer-container class="example-container">
     <mat-drawer mode="side" opened>
         <div class="brand-wrapper">
-            <img src="assets/images/svg-icons/core/brand.svg" alt="">
+            <a routerLink="/"> <img src="assets/images/svg-icons/core/brand.svg"  alt=""></a>
+           
         </div>
         <div class="menu-list-wrapper">
             <mat-nav-list>
-                <a mat-list-item routerLink="" >
-                    <span matListItemTitle>Home</span>
-                </a>
-                <mat-list-item role="navigation" >
-                    <!-- <mat-icon  color="accent">folder</mat-icon> -->
-                    <href matListItemTitle>Usuários</href>
-                </mat-list-item>
-                <mat-list-item role="navigation" >
-                    <!-- <mat-icon  color="accent">folder</mat-icon> -->
-                    <href matListItemTitle>Tenancies</href>
-                </mat-list-item>
-                <mat-list-item role="navigation" >
-                    <!-- <mat-icon >folder</mat-icon> -->
-                    <href matListItemTitle>Plano de Saúde</href>
-                </mat-list-item>
-                
+                <ng-container *ngFor="let item of navigationItems">
+                    <ng-container *ngIf="!item.children; else submenu">
+                        <ng-container *ngIf="item.link,length">
+                            <a mat-list-item [routerLink]="item.link" routerLinkActive="active-link"
+                                [routerLinkActiveOptions]="{ exact: true }">
+                                <mat-icon>{{item.icon}}</mat-icon>
+                                {{ item.label }}
+                            </a>
+                        </ng-container>
+                        <ng-container *ngIf="!item.link,length">
+                            <a mat-list-item>
+                                <mat-icon>{{item.icon}}</mat-icon>
+                                {{ item.label }}
+                            </a>
+                        </ng-container>
+                    </ng-container>
+                    <ng-template #submenu>
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>{{ item.label }}</mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <mat-nav-list>
+                                <a *ngFor="let subitem of item.children" mat-list-item [routerLink]="subitem.link">
+                                    <mat-icon>{{subitem.icon}}</mat-icon>
+                                    {{ subitem.label }}
+                                </a>
+                            </mat-nav-list>
+                        </mat-expansion-panel>
+                    </ng-template>
+                </ng-container>
             </mat-nav-list>
         </div>
     </mat-drawer>

@@ -34,8 +34,7 @@ export class BreadcumbService {
       return routeData['breadcrumb'];
     }
 
-    // If no breadcrumb data, use the route parameter as part of the label
-    const paramName = 'name'; // Adjust based on your route parameter name
+    const paramName = 'name'; 
     const paramValue = route.snapshot.params[paramName];
     return paramValue;
   }

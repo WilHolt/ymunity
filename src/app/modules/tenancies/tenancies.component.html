@@ -3,25 +3,25 @@
         <ymt-tenancy-header (goBack)="goBack()"></ymt-tenancy-header>
     </div>
     <mat-tab-group [selectedIndex]="1">
-        <mat-tab label="Geral">
+        <mat-tab label="GERAL">
             <div class="tab-content">
             </div>
         </mat-tab>
-        <mat-tab label="Unidades">
+        <mat-tab label="UNIDADES">
             <div class="tab-content">
                 <ymt-unities-tab-content [unities]="tenancyUnities$ | async"></ymt-unities-tab-content>
             </div>
         </mat-tab>
-        <mat-tab label="Usuários">
+        <mat-tab label="USUÁRIOS">
             <div class="tab-content">
-                Usuários
+                USUÁRIOS
             </div>
         </mat-tab>
-        <mat-tab label="Planos">
+        <mat-tab label="PLANOS">
             <div class="tab-content">
                 Planos</div>
         </mat-tab>
-        <mat-tab label="Patologias">
+        <mat-tab label="PATOLOGIAS">
             <div class="tab-content">
                 Patologias
             </div>

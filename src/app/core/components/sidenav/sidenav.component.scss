@@ -18,12 +18,14 @@
   }
 }
 
-.mdc-list-item__primary-text {
-  color: white;
-}
 .mdc-list-item__content {
   display: flex !important;
   .mat-icon {
     color: white;
   }
 }
+
+.active-link{
+  background-color:#FAFAFA29;
+}
+
